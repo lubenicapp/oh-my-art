@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 
 import Breadcrumb from "./artwork/Breadcrumb.tsx";
+import Frame from "./artwork/Frame.tsx";
 
 interface RouteParams {
     id: string;
@@ -64,11 +65,12 @@ function Artwork() {
                                 "Artworks",
                                 artwork.title
                             ]
-                        }></Breadcrumb>
+                        }>
+                        </Breadcrumb>
                     </div>
                     <div className="container">
-                        <div className="columns is-8">
-
+                        <div className="columns is-8 container">
+                            <Frame imageUrl={artwork.imageUrl}/>
                         </div>
                         <div className="columns is-4">
 

@@ -1,6 +1,26 @@
-function Frame() {
+import styled from "styled-components";
+
+const Figure = styled.figure`
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+        max-height: 60rem;
+        height: auto;
+    }
+`;
+
+
+
+interface Props {
+    imageUrl: string
+}
+
+function Frame({imageUrl}: Props) {
     return (
-        <h1>FRAME</h1>
+        <Figure className="image">
+            <img className="" src={imageUrl}/>
+        </Figure>
     )
 }
 
