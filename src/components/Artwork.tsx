@@ -7,6 +7,7 @@ import Frame from "./artwork/Frame.tsx";
 import PurchaseDetails from "./artwork/PurchaseDetails.tsx";
 import DeliveryDetails from "./artwork/DeliveryDetails.tsx";
 import Description from "./artwork/Description.tsx";
+import TechnicalInfo from "./artwork/TechnicalInfo.tsx";
 
 interface RouteParams {
     id: string;
@@ -81,6 +82,14 @@ function Artwork() {
                         <Description
                             content={artwork.description}
                         />
+                        <TechnicalInfo data={
+                            {
+                                "subject": artwork.subjects,
+                                "style": artwork.styles,
+                                "medium": artwork.mediums,
+                                "materials": artwork.materials
+                            }
+                        }></TechnicalInfo>
                     </div>
                 </div>
                 <div className="column is-3">

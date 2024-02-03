@@ -17,10 +17,7 @@ function Description({content}: Props) {
 
     return (
         <CollapsibleContent title="Desctiption">
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
+            <p>{content}</p>
         </CollapsibleContent>
     )
 }

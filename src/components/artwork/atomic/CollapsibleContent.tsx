@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import {useState} from "react";
+import {useState, useRef, useEffect} from "react";
 
 const Panel = styled.div`
 `
 
 const Title = styled.h2`
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.2rem;
 `
 
 const Separator = styled.hr`
@@ -20,17 +21,25 @@ interface Props {
     children: any
 }
 
-function CollapsibleContent({title, children}: Props) {
-    const [visible, setVisible] = useState(true);
+function CollapsibleContent({title, children}) {
+    const contentRef = useRef(null);
+    const [visible, setVisible] = useState(false);
 
+    useEffect(() => {
+        if(visible) {
+            contentRef.current.scrollIntoView();
+        }
+    }, [visible]);
 
     return (
-        <Panel onClick={()=>{setVisible(!visible)}}>
-            <Title>{title}</Title>
-            {visible && children}
-            <Separator/>
-        </Panel>
-    )
-}
+        <div>
+            <Panel onClick={() => setVisible(!visible)}>
+                <Title>{title}</Title>
+                {visible && children}
+            </Panel>
 
+            <Separator ref={contentRef} />
+        </div>
+    );
+}
 export default CollapsibleContent

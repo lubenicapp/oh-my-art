@@ -66,7 +66,7 @@ function DeliveryDetails() {
                     <input type="text" placeholder="81932" onChange={updateFee}/>
                 </div>
                 <div>
-                    <LinkWithLogo logo={"fa-solid fa-truck"} content={"Delivery fee is " + fee} />
+                    <LinkWithLogo logo={"fa-solid fa-truck"} content={"Delivery fee is " + fee + " €"} />
                 </div>
             </Form>
             <PickUp>
