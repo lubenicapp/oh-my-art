@@ -6,6 +6,7 @@ import Breadcrumb from "./artwork/Breadcrumb.tsx";
 import Frame from "./artwork/Frame.tsx";
 import PurchaseDetails from "./artwork/PurchaseDetails.tsx";
 import DeliveryDetails from "./artwork/DeliveryDetails.tsx";
+import Description from "./artwork/Description.tsx";
 
 interface RouteParams {
     id: string;
@@ -76,6 +77,11 @@ function Artwork() {
                     <div className="container">
                         <Frame imageUrl={artwork.imageUrl}/>
                     </div>
+                    <div className="container">
+                        <Description
+                            content={artwork.description}
+                        />
+                    </div>
                 </div>
                 <div className="column is-3">
                     <PurchaseDetails
@@ -87,9 +93,7 @@ function Artwork() {
                         dimensions={artwork.dimensions}
                         price={artwork.price}
                     />
-                    <DeliveryDetails
-
-                    />
+                    <DeliveryDetails/>
                 </div>
                 <div className="column is-2"></div>
             </div>
