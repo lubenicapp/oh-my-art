@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import Breadcrumb from "./artwork/Breadcrumb.tsx";
 import Frame from "./artwork/Frame.tsx";
+import PurchaseDetails from "./artwork/PurchaseDetails.tsx";
 
 interface RouteParams {
     id: string;
@@ -55,29 +56,36 @@ function Artwork() {
         <>
             <div className="columns">
                 <div className="column is-1"></div>
-                <div className='column'>
+                <div className="column">
+                    <Breadcrumb items={
+                        [
+                            "Home",
+                            capitalizeWord(artwork.category),
+                            artwork.artistShort.fullname,
+                            "Artworks",
+                            artwork.title
+                        ]
+                    }>
+                    </Breadcrumb>
+                </div>
+            </div>
+            <div className="columns">
+                <div className="column is-1"></div>
+                <div className="column">
                     <div className="container">
-                        <Breadcrumb items={
-                            [
-                                "Home",
-                                capitalizeWord(artwork.category),
-                                artwork.artistShort.fullname,
-                                "Artworks",
-                                artwork.title
-                            ]
-                        }>
-                        </Breadcrumb>
+                        <Frame imageUrl={artwork.imageUrl}/>
                     </div>
-                    <div className="container">
-                        <div className="columns is-8 container">
-                            <div className="">
-                                <Frame imageUrl={artwork.imageUrl}/>
-                            </div>
-                        </div>
-                        <div className="columns is-4">
-
-                        </div>
-                    </div>
+                </div>
+                <div className="column is-3">
+                    <PurchaseDetails
+                        title={artwork.title}
+                        artistName={artwork.artistShort.fullname}
+                        country={artwork.artistShort.country}
+                        category={capitalizeWord(artwork.category)}
+                        creationYear={artwork.creationYear}
+                        dimensions={artwork.dimensions}
+                        price={artwork.price}
+                    />
                 </div>
                 <div className="column is-1"></div>
             </div>

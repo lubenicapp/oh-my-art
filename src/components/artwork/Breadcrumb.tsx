@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 const List = styled.ul`
     display: flex;
-    padding: 5px;
+    padding: 0.5rem;
     list-style: none;
 `
 
 const ListItem = styled.li`
-    padding: 5px;
+    padding: 0.5rem;
 `
 
 interface Props {

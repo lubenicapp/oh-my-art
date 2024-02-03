@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+const Component = styled.div`
+    text-align: center;
+    margin-top: 1rem;
+`
+
 const Link = styled.a`
     margin-left: 0.8rem;
     color: inherit;
@@ -12,14 +17,13 @@ interface Props {
     content: string
 }
 
-function FrameLink({logo, content}: Props){
+function LinkWithLogo({logo, content}: Props){
     return (
-        <>
+        <Component>
             <i className={logo}></i>
             <Link href="#">{content}</Link>
-        </>
-
+        </Component>
     )
 }
 
-export default FrameLink
+export default LinkWithLogo
