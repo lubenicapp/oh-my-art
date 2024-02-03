@@ -5,6 +5,9 @@ const List = styled.ul`
     display: flex;
     padding: 0.5rem;
     list-style: none;
+    li:last-child{
+        font-weight: bold;
+    }
 `
 
 const ListItem = styled.li`

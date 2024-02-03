@@ -5,6 +5,7 @@ import axios from 'axios'
 import Breadcrumb from "./artwork/Breadcrumb.tsx";
 import Frame from "./artwork/Frame.tsx";
 import PurchaseDetails from "./artwork/PurchaseDetails.tsx";
+import DeliveryDetails from "./artwork/DeliveryDetails.tsx";
 
 interface RouteParams {
     id: string;
@@ -55,7 +56,7 @@ function Artwork() {
     return (
         <>
             <div className="columns">
-                <div className="column is-1"></div>
+                <div className="column is-2"></div>
                 <div className="column">
                     <Breadcrumb items={
                         [
@@ -70,7 +71,7 @@ function Artwork() {
                 </div>
             </div>
             <div className="columns">
-                <div className="column is-1"></div>
+                <div className="column is-2"></div>
                 <div className="column">
                     <div className="container">
                         <Frame imageUrl={artwork.imageUrl}/>
@@ -86,8 +87,11 @@ function Artwork() {
                         dimensions={artwork.dimensions}
                         price={artwork.price}
                     />
+                    <DeliveryDetails
+
+                    />
                 </div>
-                <div className="column is-1"></div>
+                <div className="column is-2"></div>
             </div>
         </>
 

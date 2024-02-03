@@ -88,7 +88,7 @@ function PurchaseDetails( props: Props){
             </ArtistInfo>
             <TechnicalDetails>
                 <h3 className="title is-5">{props.category}, {props.creationYear}</h3>
-                <h3 className="title is-5">{dimensions.width} W × {dimensions.height} H  × {dimensions.depth} D</h3>
+                <h3 className="title is-5">{dimensions.width} W × {dimensions.height} H  × {dimensions.depth} D in</h3>
             </TechnicalDetails>
             <Price>
                 {props.price.toLocaleString('en-US')} €
@@ -98,9 +98,6 @@ function PurchaseDetails( props: Props){
                 <button>Make an offer</button>
                 <LinkWithLogo logo="fa-solid fa-hourglass-half" content="pre-reserve for 24 hours"/>
             </PurchaseActions>
-            <DeliveryDetails>
-
-            </DeliveryDetails>
         </Panel>
     )
 }

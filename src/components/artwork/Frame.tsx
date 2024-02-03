@@ -2,12 +2,9 @@ import styled from "styled-components";
 import LinkWithLogo from "./LinkWithLogo.tsx";
 
 const Figure = styled.figure`
-    max-width: 100%;
-
     img {
         max-width: 100%;
         max-height: 60rem;
-        height: auto;
     }
 `;
 
