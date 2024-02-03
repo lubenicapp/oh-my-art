@@ -70,7 +70,9 @@ function Artwork() {
                     </div>
                     <div className="container">
                         <div className="columns is-8 container">
-                            <Frame imageUrl={artwork.imageUrl}/>
+                            <div className="">
+                                <Frame imageUrl={artwork.imageUrl}/>
+                            </div>
                         </div>
                         <div className="columns is-4">
 
