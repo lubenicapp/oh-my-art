@@ -12,6 +12,7 @@ const Panel = styled.div`
 const Arrow = styled.div`
     margin-top: -2rem;
     font-size: 6rem;
+    user-select: none;
     color: rgba(0, 0, 0, 0.5)
 `
 
