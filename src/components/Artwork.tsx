@@ -8,6 +8,7 @@ import PurchaseDetails from "./artwork/PurchaseDetails.tsx";
 import DeliveryDetails from "./artwork/DeliveryDetails.tsx";
 import Description from "./artwork/Description.tsx";
 import TechnicalInfo from "./artwork/TechnicalInfo.tsx";
+import Carousel from "./artwork/Carousel.tsx";
 
 interface RouteParams {
     id: string;
@@ -90,6 +91,11 @@ function Artwork() {
                                 "materials": artwork.materials
                             }
                         }></TechnicalInfo>
+                    </div>
+                    <div className="container">
+                        <Carousel images={
+                            artwork.otherArtworkImages
+                        } />
                     </div>
                 </div>
                 <div className="column is-3">
