@@ -8,6 +8,9 @@ then run:
 
 visit localhost:3000
 
+if you don't have docker-compose and have trouble running the app,
+it is hosted on a very cheap server here: http://64.226.108.23:3000/
+it is not guaranteed to work at the time you access it
 
 ## Explanation on choices
 
