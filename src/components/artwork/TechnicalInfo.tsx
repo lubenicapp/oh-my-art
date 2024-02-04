@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import CollapsibleContent from "./atomic/CollapsibleContent.tsx";
 
-const Panel = styled.div`
-    margin-top: 2rem;
-`
-
 const Content = styled.div`
     .keys {
         text-transform: uppercase;

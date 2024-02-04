@@ -64,16 +64,17 @@ const PurchaseActions = styled.div`
     }
 `
 
-const DeliveryDetails = styled.div`
-
-`
-
+interface Dimensions {
+    width: number;
+    height: number;
+    depth: number;
+}
 
 interface Props {
     title: string;
     artistName: string;
     country: string;
-    dimensions: object;
+    dimensions: Dimensions;
     category: string;
     creationYear: number;
     price: number;

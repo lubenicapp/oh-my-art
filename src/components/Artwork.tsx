@@ -11,7 +11,7 @@ import TechnicalInfo from "./artwork/TechnicalInfo.tsx";
 import Carousel from "./artwork/Carousel.tsx";
 
 interface RouteParams {
-    id: string;
+    [id: string]: any;
 }
 
 interface Artwork {
@@ -117,7 +117,7 @@ function Artwork() {
     );
 }
 
-function capitalizeWord(word) {
+function capitalizeWord(word: string) {
     return word[0].toUpperCase() + word.substring(1).toLowerCase()
 }
 

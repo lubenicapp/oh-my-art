@@ -17,16 +17,17 @@ const Separator = styled.hr`
 `
 
 interface Props {
-    title: string;
+    title: any;
     children: any
 }
 
-function CollapsibleContent({title, children}) {
+function CollapsibleContent({title, children}: Props) {
     const contentRef = useRef(null);
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
         if(visible) {
+            // @ts-ignore:next-line
             contentRef.current.scrollIntoView();
         }
     }, [visible]);
