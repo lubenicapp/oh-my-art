@@ -19,13 +19,15 @@ const Title = styled.div`
 
 const ArtistInfo = styled.div`
     display: flex;
+
     h2 {
         margin-right: 1.5rem;
     }
-    
-    h2:first-child{
-        color: coral;
+
+    h2:first-child {
+        color: rgba(210, 105, 30, 0.7);
     }
+
     h2:last-child {
         color: lightgrey;
     }
@@ -46,6 +48,7 @@ const Price = styled.div`
 const PurchaseActions = styled.div`
     margin-top: 2rem;
     button {
+        font-size: 1.4rem;
         height: 2.5rem;
         width: 100%;
         border-radius: 15rem;
