@@ -81,7 +81,7 @@ function Artwork() {
             </div>
             <div className="columns">
                 <div className="column is-2"></div>
-                <div className="column">
+                <div className="column is-5">
                     <div className="container">
                         <Frame imageUrl={artwork.imageUrl}/>
                     </div>
