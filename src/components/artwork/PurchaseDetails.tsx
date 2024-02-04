@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 
 import LinkWithLogo from "./LinkWithLogo.tsx";
+import {useState} from "react";
 
 const Panel = styled.div`
+    .liked {
+        color: gold;
+    }
 `
 
 const Title = styled.div`
@@ -76,15 +80,16 @@ interface Props {
 }
 
 function PurchaseDetails( props: Props){
+    const [liked, setLiked] = useState(false)
     const { dimensions } = props;
     return (
         <Panel>
             <Title className="header">
                 <h1 className="title is-2"> {props.title} </h1>
-                <i className="fa-regular fa-star title is-4"></i>
+                <i className={`fa-regular fa-star title is-4 ${liked ? "liked" : ""}`} onClick={() => setLiked(!liked)}></i>
             </Title>
             <ArtistInfo>
-            <h2 className="title is-3">{props.artistName}</h2> <h2 className="title is-3">{props.country}</h2>
+                <h2 className="title is-3">{props.artistName}</h2> <h2 className="title is-3">{props.country}</h2>
             </ArtistInfo>
             <TechnicalDetails>
                 <h3 className="title is-5">{props.category}, {props.creationYear}</h3>
