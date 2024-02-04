@@ -37,7 +37,7 @@ function Carousel({images}: Props) {
         <Panel>
             {cursor > 0 && <Arrow onClick={() => (setCursor(cursor - 1))}> ‹ </Arrow>}
             {images.slice(cursor, cursor + displayCount).map((image, index) => (
-                <div><Figure className="image" key={index}><img src={image} alt={`Slide ${index}`} /></Figure></div>
+                <div key={index}><Figure className="image"><img src={image} alt={`Slide ${index}`} /></Figure></div>
             ))}
             {cursor < images.length - displayCount && images.length > displayCount && <Arrow onClick={() => (setCursor(Math.min(cursor + 1, images.length - displayCount)))}> › </Arrow>}
         </Panel>

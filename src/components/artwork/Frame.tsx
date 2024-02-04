@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LinkWithLogo from "./LinkWithLogo.tsx";
+import LinkWithLogo from "./atomic/LinkWithLogo.tsx";
 
 const Figure = styled.figure`
     img {

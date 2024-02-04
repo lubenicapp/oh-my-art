@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LinkWithLogo from "./LinkWithLogo.tsx";
+import LinkWithLogo from "./atomic/LinkWithLogo.tsx";
 import {useState} from "react";
 
 const Panel = styled.div`
