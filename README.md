@@ -1,6 +1,3 @@
 ``` 
-npm install
-npm run dev
+ docker-compose up --build
 ```
-
-visit localhost:5173/artwork/0 or whatever the port it says

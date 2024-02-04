@@ -3,4 +3,4 @@ services:
   youart:
     build: .
     ports:
-      - "3000:5173"
+      - "3000:3000"
