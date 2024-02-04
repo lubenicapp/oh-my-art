@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import CollapsibleContent from "./atomic/CollapsibleContent.tsx";
 
-
 const Content = styled.p`
-    
 `
 
 interface Props {

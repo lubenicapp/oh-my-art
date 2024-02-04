@@ -60,7 +60,7 @@ function DeliveryDetails() {
         <Panel>
             <LinkWithLogo logo={"fa-solid fa-check"} content="131€ estimated delivery fee for France"/>
             <Form>
-                <label htmlFor="">In order to obtain an accurate delivery fee, please enter your contry of residence and zip code:</label>
+                <label htmlFor="">In order to obtain an accurate delivery fee, please enter your country of residence and zip code:</label>
                 <div>
                     <input type="text" placeholder="SPAIN" onChange={updateFee}/>
                     <input type="text" placeholder="81932" onChange={updateFee}/>

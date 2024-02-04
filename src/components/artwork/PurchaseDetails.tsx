@@ -1,6 +1,4 @@
 import styled from "styled-components";
-
-
 import LinkWithLogo from "./LinkWithLogo.tsx";
 import {useState} from "react";
 
