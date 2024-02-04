@@ -41,6 +41,11 @@ const Form = styled.form`
     }
 `
 
+const Bold = styled.span`
+    font-weight: bold;
+`
+
+
 const PickUp = styled.div`
     div {
         margin-left: 1rem;
@@ -58,7 +63,7 @@ function DeliveryDetails() {
 
     return(
         <Panel>
-            <LinkWithLogo logo={"fa-solid fa-check"} content="131€ estimated delivery fee for France"/>
+            <LinkWithLogo logo={"fa-solid fa-check"}> <Bold>131€ estimated delivery fee</Bold>  for France</LinkWithLogo>
             <Form>
                 <label htmlFor="">In order to obtain an accurate delivery fee, please enter your country of residence and zip code:</label>
                 <div>
@@ -66,12 +71,12 @@ function DeliveryDetails() {
                     <input type="text" placeholder="81932" onChange={updateFee}/>
                 </div>
                 <div>
-                    <LinkWithLogo logo={"fa-solid fa-truck"} content={"Delivery fee is " + fee + " €"} />
+                    <LinkWithLogo logo={"fa-solid fa-truck"}>{"Delivery fee is " + fee + " €"} </LinkWithLogo>
                 </div>
             </Form>
             <PickUp>
-                <LinkWithLogo logo={"fa-solid fa-location-dot"} content="free pickup in Bruxelles, Belgium" />
-                <LinkWithLogo logo={"fa-solid fa-check"} content="try 14 days at home for free" />
+                <LinkWithLogo logo={"fa-solid fa-location-dot"}> free pickup in <Bold>Bruxelles, Belgium</Bold> </LinkWithLogo>
+                <LinkWithLogo logo={"fa-solid fa-check"}> try 14 days at home for free </LinkWithLogo>
             </PickUp>
         </Panel>
     )

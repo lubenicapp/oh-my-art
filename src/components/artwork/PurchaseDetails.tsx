@@ -100,7 +100,7 @@ function PurchaseDetails( props: Props){
             <PurchaseActions>
                 <button>Acquire</button>
                 <button>Make an offer</button>
-                <LinkWithLogo logo="fa-solid fa-hourglass-half" content="pre-reserve for 24 hours"/>
+                <LinkWithLogo logo="fa-solid fa-hourglass-half"> pre-reserve for 24 hours</LinkWithLogo>
             </PurchaseActions>
         </Panel>
     )

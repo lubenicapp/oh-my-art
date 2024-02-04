@@ -14,14 +14,14 @@ const Link = styled.a`
 
 interface Props {
     logo: string,
-    content: string
+    children: string
 }
 
-function LinkWithLogo({logo, content}: Props){
+function LinkWithLogo({logo, children}: Props){
     return (
         <Component>
             <i className={logo}></i>
-            <Link href="#">{content}</Link>
+            <Link href="#">{children}</Link>
         </Component>
     )
 }

@@ -18,8 +18,8 @@ function Frame({imageUrl}: Props) {
             <img className="" src={imageUrl}/>
             <div className="columns">
                 <div className="column"></div>
-                <div className="column"><LinkWithLogo logo="fa-solid fa-eye" content="View in a room"/></div>
-                <div className="column"><LinkWithLogo logo="fa-brands fa-unity" content="AR view"/></div>
+                <div className="column"><LinkWithLogo logo="fa-solid fa-eye"> View in a room</LinkWithLogo></div>
+                <div className="column"><LinkWithLogo logo="fa-brands fa-unity"> AR view</LinkWithLogo></div>
                 <div className="column"></div>
             </div>
         </Figure>
