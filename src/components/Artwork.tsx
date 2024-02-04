@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
+import styled from "styled-components";
 
 import Breadcrumb from "./artwork/Breadcrumb.tsx";
 import Frame from "./artwork/Frame.tsx";
@@ -9,6 +10,11 @@ import DeliveryDetails from "./artwork/DeliveryDetails.tsx";
 import Description from "./artwork/Description.tsx";
 import TechnicalInfo from "./artwork/TechnicalInfo.tsx";
 import Carousel from "./artwork/Carousel.tsx";
+
+const Container = styled.div`
+    margin-top: 3rem;
+`
+
 
 interface RouteParams {
     [id: string]: any;
@@ -79,7 +85,7 @@ function Artwork() {
                     <div className="container">
                         <Frame imageUrl={artwork.imageUrl}/>
                     </div>
-                    <div className="container">
+                    <Container className="container">
                         <Description
                             content={artwork.description}
                         />
@@ -91,12 +97,12 @@ function Artwork() {
                                 "materials": artwork.materials
                             }
                         }></TechnicalInfo>
-                    </div>
-                    <div className="container">
+                    </Container>
+                    <Container className="container">
                         <Carousel images={
                             artwork.otherArtworkImages
                         } />
-                    </div>
+                    </Container>
                 </div>
                 <div className="column is-3">
                     <PurchaseDetails
