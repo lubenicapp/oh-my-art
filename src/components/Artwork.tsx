@@ -108,7 +108,7 @@ function Artwork() {
                     <PurchaseDetails
                         title={artwork.title}
                         artistName={artwork.artistShort.fullname}
-                        country={artwork.artistShort.country}
+                        country={capitalizeWord(artwork.artistShort.country)}
                         category={capitalizeWord(artwork.category)}
                         creationYear={artwork.creationYear}
                         dimensions={artwork.dimensions}
@@ -124,7 +124,8 @@ function Artwork() {
 }
 
 function capitalizeWord(word: string) {
-    return word[0].toUpperCase() + word.substring(1).toLowerCase()
+    if (word.length > 0)
+        return word[0].toUpperCase() + word.substring(1).toLowerCase()
 }
 
 export default Artwork;
