@@ -15,13 +15,13 @@ const Arrow = styled.div`
     color: rgba(0, 0, 0, 0.5)
 `
 
+const Container = styled.div`
+    height: 12.8rem;
+    width: 12.8rem;
+`
 
 const Figure = styled.figure`
-    margin-left: 3rem;
-    img {
-        max-width: 12.8rem;
-        max-height: 12.8rem;
-    }
+    margin-left: 6rem;
 `;
 
 
@@ -37,7 +37,7 @@ function Carousel({images}: Props) {
         <Panel>
             {cursor > 0 && <Arrow onClick={() => (setCursor(cursor - 1))}> ‹ </Arrow>}
             {images.slice(cursor, cursor + displayCount).map((image, index) => (
-                <div key={index}><Figure className="image"><img src={image} alt={`Slide ${index}`} /></Figure></div>
+                <Container key={index}><Figure className="image"><img src={image} alt={`Slide ${index}`} /></Figure></Container>
             ))}
             {cursor < images.length - displayCount && images.length > displayCount && <Arrow onClick={() => (setCursor(Math.min(cursor + 1, images.length - displayCount)))}> › </Arrow>}
         </Panel>
